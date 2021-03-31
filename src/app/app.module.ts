@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TemplateVariableComponent } from './day10/template-variable/template-variable.component';
+import { Toggle2Component } from './day10/toggle2/toggle2.component';
 import { DataBindingComponent } from './day3/data-binding/data-binding.component';
 import { NgIfComponent } from './day4/ng-if/ng-if.component';
 import { NgForComponent } from './day5/ng-for/ng-for.component';
@@ -29,6 +31,8 @@ import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.c
     AuthorListComponent,
     TwoWayBindingComponent,
     ToggleComponent,
+    Toggle2Component,
+    TemplateVariableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

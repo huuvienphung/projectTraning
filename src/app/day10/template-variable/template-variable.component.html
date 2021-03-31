@@ -1,0 +1,35 @@
+<h2>template variable</h2>
+<app-toggle2
+  #toggleComp
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
+<br />
+<button (click)="toggleComp.toggle()">Toggle Me</button>
+
+<h2>View Child</h2>
+<input type="text" #nameInput placeholder="focus after 2s" />
+<app-toggle2
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
+<br />
+<button #toggleButton>test view</button>
+
+<h2>View Children</h2>
+<app-toggle2
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
+<app-toggle2
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
+<app-toggle2
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
+<app-toggle2
+  [checked]="isChecked"
+  (checkedChange)="isChecked = $event"
+></app-toggle2>
