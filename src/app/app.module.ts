@@ -18,6 +18,8 @@ import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
 import { ContentProjectionComponent } from './day13/content-projection/content-projection.component';
 import { Toggle3Component } from './day13/toggle3/toggle3.component';
+import { NgTemplateComponent } from './day14/ng-template/ng-template.component';
+import { TabsComponent } from './day14/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { Toggle3Component } from './day13/toggle3/toggle3.component';
     TemplateVariableComponent,
     ContentProjectionComponent,
     Toggle3Component,
+    NgTemplateComponent,
+    TabsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

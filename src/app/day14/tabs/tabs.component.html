@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs mx-1 my-1">
+  <li class="nav-item" *ngFor="let link of navs">
+    <a class="nav-link" aria-current="page" href="#">
+      <ng-container *ngIf="linkTemplate; else noTemplate">
+        <ng-container
+          [ngTemplateOutlet]="linkTemplate"
+          [ngTemplateOutletContext]="{ link: link }"
+        ></ng-container>
+      </ng-container>
+      <ng-template #noTemplate>
+        {{ link }}
+      </ng-template>
+    </a>
+  </li>
+</ul>
