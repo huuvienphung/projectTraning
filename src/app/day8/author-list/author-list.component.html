@@ -1,0 +1,11 @@
+<ng-container *ngIf="authors.length > 0; else elseTemplate">
+  <app-author-dtails
+    *ngFor="let author of authors"
+    [author]="author"
+    (select)="onSelected($event)"
+    (delete)="onDelete($event)"
+  ></app-author-dtails>
+</ng-container>
+<ng-template #elseTemplate> <div>deleted all users</div> </ng-template>
+
+<h2>Current selected author: {{ currentAuthor.name }}</h2>

@@ -9,9 +9,12 @@ import { NgForComponent } from './day5/ng-for/ng-for.component';
 import { ClassStyleComponent } from './day6/class-style/class-style.component';
 import { InputBindingComponent } from './day7/input-binding/input-binding.component';
 import { ProgressBarComponent } from './day7/progress-bar/progress-bar.component';
+import { OutputBindingComponent } from './day8/output-binding/output-binding.component';
+import { AuthorDtailsComponent } from './day8/author-dtails/author-dtails.component';
+import { AuthorListComponent } from './day8/author-list/author-list.component';
 
 @NgModule({
-  declarations: [AppComponent, DataBindingComponent, NgIfComponent, NgForComponent, ClassStyleComponent, InputBindingComponent, ProgressBarComponent],
+  declarations: [AppComponent, DataBindingComponent, NgIfComponent, NgForComponent, ClassStyleComponent, InputBindingComponent, ProgressBarComponent, OutputBindingComponent, AuthorDtailsComponent, AuthorListComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
