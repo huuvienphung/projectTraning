@@ -16,6 +16,8 @@ import { AuthorListComponent } from './day8/author-list/author-list.component';
 import { OutputBindingComponent } from './day8/output-binding/output-binding.component';
 import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
+import { ContentProjectionComponent } from './day13/content-projection/content-projection.component';
+import { Toggle3Component } from './day13/toggle3/toggle3.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.c
     ToggleComponent,
     Toggle2Component,
     TemplateVariableComponent,
+    ContentProjectionComponent,
+    Toggle3Component,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

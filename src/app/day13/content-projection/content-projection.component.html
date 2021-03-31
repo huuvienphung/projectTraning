@@ -1,0 +1,11 @@
+<app-toggle3 [(checked)]="questions.question1">
+  <h3>Header1</h3>
+  <label>Question1</label>
+  <p>Content1</p>
+</app-toggle3>
+<app-toggle3 [(checked)]="questions.question2"
+  ><h3>Header2</h3>
+  <ng-container ngProjectAs="label">Question2</ng-container>
+  <p>Content2</p>
+  <button>skip</button>
+</app-toggle3>
