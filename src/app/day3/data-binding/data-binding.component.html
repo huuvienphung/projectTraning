@@ -1,0 +1,12 @@
+<h1>--Day3--</h1>
+<!-- {{expression}} -->
+<p>{{ user.name }}</p>
+<p>{{ user.age }}</p>
+
+<!-- property binding -->
+<input type="inputType" [value]="user.name" />
+<input type="button" value="click me" (click)="handler()" />
+
+<!-- two ways data binding -->
+<h2>{{ title }}</h2>
+<input type="text" [ngModel]="title" (ngModelChange)="title = $event" />

@@ -1,0 +1,41 @@
+<h1>--day6--</h1>
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
+<!-- class ver1 -->
+<div
+  class="box"
+  [class.red-border]="isDanger"
+  [class.yellow-background]="isWarning"
+></div>
+<!-- class ver2 -->
+<div class="box" [class]="['red-border', 'yellow-background']"></div>
+<!-- class ver3 -->
+<div
+  class="box"
+  [class]="{ 'red-border': isDanger, 'yellow-background': isWarning }"
+></div>
+<!-- class ver4 -->
+<div [class]="variable"></div>
+
+<!-- [style.tenStyle] -->
+<!-- [style.ten-style] -->
+<!-- [style.ten-style.unit] -->
+<!-- [style]=object -->
+<!-- [style.css-variable] -->
+<p
+  [style.color]="'red'"
+  [style.background-color]="'yellow'"
+  [style.fontSize.rem]="2"
+>
+  Lorem ipsum dolor sit amet.
+</p>
+<p [style]="{ color: 'red', backgroundColor: 'yellow', fontSize: '2rem' }">
+  Lorem ipsum dolor sit amet.
+</p>
+
+<p
+  [style.--text-color]="isDanger ? 'red' : 'blue'"
+  [style]="{ color: 'var(--text-color)' }"
+>
+  Lorem ipsum dolor sit amet.
+</p>

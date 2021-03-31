@@ -1,0 +1,23 @@
+<h1>--day5--</h1>
+<ul>
+  <li
+    *ngFor="
+      let user of users;
+      index as idx;
+      count as total;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd
+    "
+  >
+    <div>
+      name: {{ user.name }} | email: {{ user.email }} | phone: {{ user.phone }}
+    </div>
+    <div>at index {{ idx }} out of {{ total }}</div>
+    <div *ngIf="isFirst">I am First</div>
+    <div *ngIf="isLast">I am Last</div>
+    <div *ngIf="isEven">I am Even</div>
+    <div *ngIf="isOdd">I am Odd</div>
+  </li>
+</ul>
