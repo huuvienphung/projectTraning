@@ -1,0 +1,19 @@
+<app-tab-group
+  [activeIndex]="currentIndex"
+  (activeIndexChange)="currentIndex = $event"
+>
+  <app-tab-panel title="First tab">First tab content</app-tab-panel>
+  <app-tab-panel title="Second tab">Second tab content</app-tab-panel>
+  <app-tab-panel title="Thrid tab">Thrid tab content</app-tab-panel>
+  <app-tab-panel title="Fourth tab">Fourth tab content</app-tab-panel>
+</app-tab-group>
+<app-tab-bs-group
+  [activeIndex]="currentIndex"
+  (activeIndexChange)="currentIndex = $event"
+  ><app-tab-panel title="First tab">First tab content</app-tab-panel>
+  <app-tab-panel title="Second tab">Second tab content</app-tab-panel>
+  <app-tab-panel title="Thrid tab">Thrid tab content</app-tab-panel>
+  <app-tab-panel title="Fourth tab"
+    >Fourth tab content</app-tab-panel
+  ></app-tab-bs-group
+>

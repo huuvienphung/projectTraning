@@ -18,6 +18,8 @@
   <span class="badge badge-primary">{{ counter }}</span>
 </ng-template>
 
-<ng-template #linkTemplate let-lin="link">{{ lin }}</ng-template>
+<ng-template #linkTemplate let-l="link" let-k="net"
+  >{{ l }} {{ k }}</ng-template
+>
 
 <app-tabs [navs]="navs" [linkTemplate]="linkTemplate"></app-tabs>

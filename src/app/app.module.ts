@@ -20,6 +20,10 @@ import { ContentProjectionComponent } from './day13/content-projection/content-p
 import { Toggle3Component } from './day13/toggle3/toggle3.component';
 import { NgTemplateComponent } from './day14/ng-template/ng-template.component';
 import { TabsComponent } from './day14/tabs/tabs.component';
+import { DependencyInjectionComponent } from './day15_16/dependency-injection/dependency-injection.component';
+import { TabGroupComponent } from './day15_16/tab-group/tab-group.component';
+import { TabPanelComponent } from './day15_16/tab-panel/tab-panel.component';
+import { TabBsGroupComponent } from './day15_16/tab-bs-group/tab-bs-group.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { TabsComponent } from './day14/tabs/tabs.component';
     Toggle3Component,
     NgTemplateComponent,
     TabsComponent,
+    DependencyInjectionComponent,
+    TabGroupComponent,
+    TabPanelComponent,
+    TabBsGroupComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
