@@ -2,18 +2,40 @@
   [activeIndex]="currentIndex"
   (activeIndexChange)="currentIndex = $event"
 >
-  <app-tab-panel title="First tab">First tab content</app-tab-panel>
-  <app-tab-panel title="Second tab">Second tab content</app-tab-panel>
-  <app-tab-panel title="Thrid tab">Thrid tab content</app-tab-panel>
-  <app-tab-panel title="Fourth tab">Fourth tab content</app-tab-panel>
+  <app-tab-panel title="First tab">
+    <ng-template appTabPanel>
+      First tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Second tab">
+    <ng-template appTabPanel>
+      Second tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Thrid tab">
+    <ng-template appTabPanel>
+      Thrid tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Fourth tab">
+    <ng-template appTabPanel>
+      Fourth tab content
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
 </app-tab-group>
+
+<button class="btn btn-primary" (click)="showTab4 = !showTab4">Toggle 4</button>
 <app-tab-bs-group
   [activeIndex]="currentIndex"
   (activeIndexChange)="currentIndex = $event"
   ><app-tab-panel title="First tab">First tab content</app-tab-panel>
   <app-tab-panel title="Second tab">Second tab content</app-tab-panel>
   <app-tab-panel title="Thrid tab">Thrid tab content</app-tab-panel>
-  <app-tab-panel title="Fourth tab"
-    >Fourth tab content</app-tab-panel
-  ></app-tab-bs-group
->
+  <app-tab-panel *ngIf="showTab4" title="Fourth tab"
+    >Fourth tab content
+  </app-tab-panel>
+</app-tab-bs-group>

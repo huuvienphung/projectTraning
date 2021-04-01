@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  QueryList,
+} from '@angular/core';
 import { TabPanelComponent } from '../tab-panel/tab-panel.component';
 
 @Component({
@@ -12,7 +20,13 @@ export class TabGroupComponent implements OnInit {
   @Input() activeIndex = 0;
   @Output() activeIndexChange = new EventEmitter<number>();
 
-  constructor() {}
+  ngAfterContentInit(): void {
+    console.log(this.tabPanels);
+    this.tabPanels.changes.subscribe(console.log);
+  }
+
+  @ContentChildren(TabPanelComponent)
+  tabPanels!: QueryList<TabPanelComponent>;
 
   ngOnInit(): void {}
   addTab(tab: TabPanelComponent) {

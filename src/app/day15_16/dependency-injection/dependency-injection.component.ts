@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DependencyInjectionComponent implements OnInit {
   currentIndex = 0;
+  showTab4 = true;
   constructor() {}
 
   ngOnInit(): void {}

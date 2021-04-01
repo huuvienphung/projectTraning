@@ -24,6 +24,8 @@ import { DependencyInjectionComponent } from './day15_16/dependency-injection/de
 import { TabGroupComponent } from './day15_16/tab-group/tab-group.component';
 import { TabPanelComponent } from './day15_16/tab-panel/tab-panel.component';
 import { TabBsGroupComponent } from './day15_16/tab-bs-group/tab-bs-group.component';
+import { CounterComponent } from './day17/counter/counter.component';
+import { TabPanelDirective } from './day17/tab-panel.directive';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { TabBsGroupComponent } from './day15_16/tab-bs-group/tab-bs-group.compon
     TabGroupComponent,
     TabPanelComponent,
     TabBsGroupComponent,
+    CounterComponent,
+    TabPanelDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
