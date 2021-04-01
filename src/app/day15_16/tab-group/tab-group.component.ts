@@ -8,6 +8,7 @@ import { TabPanelComponent } from '../tab-panel/tab-panel.component';
 })
 export class TabGroupComponent implements OnInit {
   tabPanelList: TabPanelComponent[] = [];
+
   @Input() activeIndex = 0;
   @Output() activeIndexChange = new EventEmitter<number>();
 
