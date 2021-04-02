@@ -1,0 +1,46 @@
+<p>pipe works!</p>
+<p>{{ currentDate | date }}</p>
+<p>{{ currentDate | date: "medium" }}</p>
+<p>{{ currentDate | date: "fullDate" }}</p>
+<p>{{ currentDate | date: "yyyy-MM/dd" }}</p>
+
+<p>Name: {{ "Vien Phung" | lowercase }}</p>
+<p>Name: {{ "Vien Phung" | uppercase }}</p>
+
+<p>{{ 250 | currency }}</p>
+<p>{{ 25000 | currency: "VND" }}</p>
+<p>{{ 2.347423 | number: "2.1-4" }}</p>
+
+<p>{{ 0.77 | percent }}</p>
+<p>{{ currentDate | json }}</p>
+<p>{{ user | json }}</p>
+<!-- <p>{{ time }}</p> -->
+<!-- <p>{{ intervals | async }}</p> -->
+
+<p>
+  {{
+    addr.address1 +
+      " " +
+      addr.address2 +
+      ", " +
+      addr.city +
+      ", " +
+      addr.state +
+      " " +
+      addr.zip +
+      ", " +
+      addr.country
+  }}
+</p>
+<p>{{ formatAddress(addr) }}</p>
+<p>{{ addr | formatAddress: "para" }}</p>
+
+<h2>Full user list</h2>
+<ul>
+  <li *ngFor="let user of users">{{ user.name }} {{ user.age }}</li>
+</ul>
+<h2>Adult user list</h2>
+<ul>
+  <li *ngFor="let user of users | adult">{{ user.name }} {{ user.age }}</li>
+</ul>
+<button (click)="addUser()">Add user</button>
