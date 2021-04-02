@@ -76,7 +76,7 @@ export class PipeComponent implements OnInit {
   }
 
   addUser() {
-    this.users.push({ name: 'new user', age: 29 });
-    // this.users = [...this.users, { name: 'new user', age: 30 }];
+    // this.users.push({ name: 'new user', age: 29 });
+    this.users = [...this.users, { name: 'new user', age: 30 }];
   }
 }
