@@ -21,7 +21,7 @@ export class ArticleDetailComponent implements OnInit {
   ngOnInit(): void {
     this.article$ = this._route.params.pipe(
       pluck('slug'),
-      switchMap((val) => this._api.getArticleBySlug(val))
+      switchMap((slug) => this._api.getArticleBySlug(slug))
     );
   }
 }
