@@ -18,6 +18,8 @@ import { TabPanelDirective } from './day17/tab-panel.directive';
 import { AdultPipe } from './day18/adult/adult.pipe';
 import { FormatAddressPipe } from './day18/format-address.pipe';
 import { PipeComponent } from './day18/pipe/pipe.component';
+import { ArticlesModule } from './day27_29/articles/articles.module';
+import { RouterComponent } from './day27_29/router/router.component';
 import { DataBindingComponent } from './day3/data-binding/data-binding.component';
 import { NgIfComponent } from './day4/ng-if/ng-if.component';
 import { NgForComponent } from './day5/ng-for/ng-for.component';
@@ -29,9 +31,6 @@ import { AuthorListComponent } from './day8/author-list/author-list.component';
 import { OutputBindingComponent } from './day8/output-binding/output-binding.component';
 import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
-import { RouterComponent } from './day27_29/router/router.component';
-import { ArticleListComponent } from './day27_29/article-list/article-list.component';
-import { ArticleDetailComponent } from './day27_29/article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
@@ -63,10 +62,8 @@ import { ArticleDetailComponent } from './day27_29/article-detail/article-detail
     FormatAddressPipe,
     AdultPipe,
     RouterComponent,
-    ArticleListComponent,
-    ArticleDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ArticlesModule],
   providers: [],
   bootstrap: [AppComponent],
 })
