@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ArticleDetailComponent,
   },
   {
-    path: '',
+    path: 'list',
     component: ArticleListComponent,
   },
 ];
