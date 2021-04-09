@@ -18,7 +18,6 @@ import { TabPanelDirective } from './day17/tab-panel.directive';
 import { AdultPipe } from './day18/adult/adult.pipe';
 import { FormatAddressPipe } from './day18/format-address.pipe';
 import { PipeComponent } from './day18/pipe/pipe.component';
-import { ArticlesModule } from './day27_29/articles/articles.module';
 import { RouterComponent } from './day27_29/router/router.component';
 import { DataBindingComponent } from './day3/data-binding/data-binding.component';
 import { NgIfComponent } from './day4/ng-if/ng-if.component';
@@ -63,7 +62,7 @@ import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.c
     AdultPipe,
     RouterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ArticlesModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

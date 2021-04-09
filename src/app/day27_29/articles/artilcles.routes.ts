@@ -3,11 +3,6 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 import { ArticleListComponent } from './article-list/article-list.component';
 
 export const articlesRoutes: Routes = [
-  {
-    path: 'articles',
-    children: [
-      { path: '', component: ArticleListComponent },
-      { path: ':slug', component: ArticleDetailComponent },
-    ],
-  },
+  { path: '', component: ArticleListComponent },
+  { path: ':slug', component: ArticleDetailComponent },
 ];
