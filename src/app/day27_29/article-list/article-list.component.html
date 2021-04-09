@@ -1,0 +1,18 @@
+<h3>danh sách list</h3>
+<div class="container">
+  <div class="row" *ngIf="articles$ | async as articles">
+    <div class="col-md-3" *ngFor="let article of articles">
+      <div class="card text-center">
+        <div class="card-header">
+          {{ article.title }}
+        </div>
+        <div class="card-body">
+          <p class="cart-text">{{ article.content }}</p>
+          <a [routerLink]="'detail/' + article.slug" class="btn btn-primary"
+            >xem {{ article.title }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

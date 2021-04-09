@@ -1,0 +1,12 @@
+<!-- <p>article-detail works!</p>
+<ul>
+  <h3>{{ article$.title }}</h3>
+  <h4>{{ article$.content }}</h4>
+  <h5>{{ article$.updateAt }}</h5>
+</ul> -->
+<ng-container *ngIf="article$ | async as article; else noArticle">
+  <h3>{{ article.title }}</h3>
+  <h4>{{ article.content }}</h4>
+  <h5>{{ article.updateAt }}</h5>
+</ng-container>
+<ng-template #noArticle> <div>loading...</div></ng-template>
