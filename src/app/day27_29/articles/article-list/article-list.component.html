@@ -7,9 +7,16 @@
           {{ article.title }}
         </div>
         <div class="card-body">
-          <p class="cart-text">{{ article.content }}</p>
-          <a [routerLink]="'/articles/' + article.slug" class="btn btn-primary"
+          <p class="cart-text">{{ article.body }}</p>
+          <a
+            [routerLink]="'/articles/' + article.slug"
+            class="mr-1 btn btn-primary"
             >xem {{ article.title }}</a
+          >
+          <a
+            [routerLink]="'/articles/' + article.slug + '/edit'"
+            class="btn btn-secondary"
+            >Edit</a
           >
         </div>
       </div>
