@@ -1,0 +1,89 @@
+<div class="container">
+  <form novalidate #signInForm="ngForm" (submit)="onSubmit(signInForm)">
+    <h2>Sign in</h2>
+    <div class="form-group">
+      <label>Username</label>
+      <input
+        #username="ngModel"
+        [(ngModel)]="userInfo.userName"
+        signInForm
+        name="username"
+        [pattern]="usernamePattern"
+        required
+        minlength="6"
+        maxlength="32"
+        class="form-control"
+        type="text"
+        placeholder="Username"
+        ng-touched
+        ng-valid
+      />
+      <p>{{ username.errors | json }}</p>
+      <!-- <p>{{ username.errors.required }}</p> -->
+      <div
+        [hidden]="username.valid || username.pristine"
+        class="alert alert-danger"
+      >
+        Name is required
+      </div>
+      <!-- <div *ngIf="username.touched && !username.valid">
+        <span *ngIf="username.errors.required">Username is required</span>
+        <span *ngIf="username.errors.minlength || username.errors.maxlength"
+          >Length from 6 to 32 characters</span
+        >
+        <span
+          *ngIf="
+            !(username.errors.minlength || username.errors.maxlength) &&
+            username.errors.pattern
+          "
+          >Only alphabet</span
+        >
+      </div> -->
+    </div>
+    <div ngModelGroup="social">
+      <div class="form-group">
+        <label>Password</label>
+        <input
+          [(ngModel)]="userInfo.password"
+          #password="ngModel"
+          [pattern]="passwordPattern"
+          required
+          minlength="6"
+          maxlength="32"
+          placeholder="Password"
+          type="password"
+          class="form-control"
+          name="password"
+        />
+        <p>{{ password.errors | json }}</p>
+      </div>
+      <div class="form-check">
+        <input
+          [(ngModel)]="userInfo.rememberMe"
+          name="rememberMe"
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+        />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <button
+        [disabled]="!signInForm.form.valid"
+        class="btn btn-primary"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </div>
+  </form>
+</div>
+<h5>
+  user info
+  {{ userInfo | json }}
+</h5>
+<h5>
+  sing in form
+  {{ signInForm.value | json }}
+</h5>

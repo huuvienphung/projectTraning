@@ -30,6 +30,8 @@ import { AuthorListComponent } from './day8/author-list/author-list.component';
 import { OutputBindingComponent } from './day8/output-binding/output-binding.component';
 import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
+import { FormComponent } from './day33/form/form.component';
+import { SignInComponent } from './day33/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.c
     FormatAddressPipe,
     AdultPipe,
     RouterComponent,
+    FormComponent,
+    SignInComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

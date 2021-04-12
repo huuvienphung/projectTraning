@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { environment } from 'src/environments/environment';
 import { ArticlesGuard } from './day27_29/guards/articles.guard';
+import { SignInComponent } from './day33/sign-in/sign-in.component';
 
 const routes: Routes = [
   {
@@ -12,11 +12,18 @@ const routes: Routes = [
       ),
     canLoad: [ArticlesGuard],
   },
+  {
+    path: 'sign-in',
+    component: SignInComponent,
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { enableTracing: !environment.production }),
+    RouterModule.forRoot(
+      routes
+      // , { enableTracing: !environment.production }
+    ),
   ],
   exports: [RouterModule],
 })
