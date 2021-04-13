@@ -32,6 +32,7 @@ import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
 import { FormComponent } from './day33/form/form.component';
 import { SignInComponent } from './day33/sign-in/sign-in.component';
+import { SignInRfComponent } from './day33/sign-in-rf/sign-in-rf.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { SignInComponent } from './day33/sign-in/sign-in.component';
     RouterComponent,
     FormComponent,
     SignInComponent,
+    SignInRfComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
