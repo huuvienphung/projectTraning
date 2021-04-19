@@ -1,8 +1,10 @@
-<form [formGroup]="form$ | async">
-  <label for="title">Title</label>
-  <input type="text" name="" id="title" formControlName="title" />
-  <br />
-  <label for="body">Body</label>
-  <textarea id="body" formControlName="body"></textarea>
-  <br />
-</form>
+<div *ngIf="form$ | async as form">
+  <form [formGroup]="form">
+    <label for="title">Title</label>
+    <input type="text" name="" id="title" formControlName="title" required />
+    <br />
+    <label for="body">Body</label>
+    <textarea id="body" formControlName="body"></textarea>
+    <br />
+  </form>
+</div>

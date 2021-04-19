@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { filter, pluck, shareReplay, switchMap, take } from 'rxjs/operators';
+import { pluck, shareReplay, switchMap, take, tap } from 'rxjs/operators';
 import { Article } from '../../models/article';
 import { ArticleService } from '../../services/article.service';
 import { CheckDeactivate } from '../article-detail/check-deactivate';
@@ -14,6 +14,7 @@ import { CheckDeactivate } from '../article-detail/check-deactivate';
 })
 export class ArticleDetailEditComponent implements OnInit, CheckDeactivate {
   form$!: Observable<FormGroup>;
+
   private initialFormValue: unknown;
 
   constructor(
@@ -22,15 +23,21 @@ export class ArticleDetailEditComponent implements OnInit, CheckDeactivate {
     private readonly _api: ArticleService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // const targetSlug = this._route.snapshot.paramMap.get('slug');
+    // console.log(this._route.snapshot.params);
+
     this.form$ = this._route.params.pipe(
       pluck('slug'),
       switchMap((slug) => this._api.getArticleBySlug(slug)),
-      filter((article) => !!article),
-      switchMap((article) => of(this.initForm(article))),
+      tap((val) => console.log(val)), //object
+      switchMap((article) => {
+        return of(this.initForm(article));
+      }),
       shareReplay(1)
     );
   }
+
   checkDeactivate(): Observable<boolean> {
     let formValue = {};
     this.form$.pipe(take(1)).subscribe((form) => {
@@ -41,6 +48,7 @@ export class ArticleDetailEditComponent implements OnInit, CheckDeactivate {
     const isEdited =
       JSON.stringify(this.initialFormValue) !== JSON.stringify(formValue);
     return of(!isEdited || confirm('Do you want to cancel change? '));
+    // return of(true);
   }
 
   private initForm(article: Article): FormGroup {
@@ -48,7 +56,10 @@ export class ArticleDetailEditComponent implements OnInit, CheckDeactivate {
       title: [article.title],
       body: [article.body],
     });
+
     this.initialFormValue = form.getRawValue();
+    // console.log(this.initialFormValue);
+
     return form;
   }
 }

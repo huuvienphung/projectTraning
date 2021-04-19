@@ -20,6 +20,9 @@ import { FormatAddressPipe } from './day18/format-address.pipe';
 import { PipeComponent } from './day18/pipe/pipe.component';
 import { RouterComponent } from './day27_29/router/router.component';
 import { DataBindingComponent } from './day3/data-binding/data-binding.component';
+import { FormComponent } from './day33/form/form.component';
+import { SignInRfComponent } from './day33/sign-in-rf/sign-in-rf.component';
+import { SignInComponent } from './day33/sign-in/sign-in.component';
 import { NgIfComponent } from './day4/ng-if/ng-if.component';
 import { NgForComponent } from './day5/ng-for/ng-for.component';
 import { ClassStyleComponent } from './day6/class-style/class-style.component';
@@ -30,9 +33,6 @@ import { AuthorListComponent } from './day8/author-list/author-list.component';
 import { OutputBindingComponent } from './day8/output-binding/output-binding.component';
 import { ToggleComponent } from './day9/toggle/toggle.component';
 import { TwoWayBindingComponent } from './day9/two-way-binding/two-way-binding.component';
-import { FormComponent } from './day33/form/form.component';
-import { SignInComponent } from './day33/sign-in/sign-in.component';
-import { SignInRfComponent } from './day33/sign-in-rf/sign-in-rf.component';
 
 @NgModule({
   declarations: [

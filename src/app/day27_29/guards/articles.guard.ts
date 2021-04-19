@@ -42,7 +42,7 @@ export class ArticlesGuard
     if (!targetSlug) {
       return of(false);
     }
-    console.log(targetSlug);
+    // console.log(targetSlug);
 
     return this.authService.currentUser.pipe(
       map((user) => user.articlecs.includes(targetSlug))
